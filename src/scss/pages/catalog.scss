@@ -1,0 +1,13 @@
+.catalog-page{
+    &__container{
+        display: grid;
+        grid-template-columns: 263px 1fr;
+        grid-template-areas: "sidebar products";
+    }
+    &__products{
+        grid-area: products;
+    }
+    &__side{
+        grid-area: sidebar;
+    }
+}

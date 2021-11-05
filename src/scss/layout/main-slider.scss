@@ -1,0 +1,147 @@
+.main-slider{
+    margin-bottom: 30px; 
+    @media screen and (max-width : $screen-xsm+px) {
+        margin-right: -20px;
+        margin-left: -20px;   
+    } 
+    &__slide{
+        width: 100%;
+        min-height: 450px;
+        box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.09);
+        padding: 100px 120px;
+        position: relative;
+        border: none;
+        @media screen and (max-width : $screen-md+px) {
+            min-height: 337px;
+            padding: 85px 58px;
+        }
+        @media screen and (max-width : $screen-sm+px) {
+            min-height: 250px;
+            padding: 70px 40px;
+        }
+        @media screen and (max-width : $screen-xsm+px) {
+            min-height: 125px;
+            padding: 0;
+            box-shadow: none;
+            
+        } 
+    }
+    &__content{
+        position: relative;
+        z-index: 3;
+        max-width: 300px;
+        & > *:not(:last-child){
+            margin-bottom: 15px;
+        }
+        @media screen and (max-width : $screen-xsm+px) {
+            display: flex;
+            width: 50%;
+            min-height: 125px;
+            padding: 0 15px;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            background: #F4F4F4;
+        } 
+    }
+    &__title{
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 105.3%;
+        text-transform: uppercase;
+        color: #3C3C3C;
+        @media screen and (max-width : $screen-md+px) {
+            font-size: 38px;
+        }
+        @media screen and (max-width : $screen-xsm+px) {
+            font-size: 16px;
+        } 
+    }
+    &__sub-title{
+        font-family: 'Roboto Condensed';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140.8%;
+        letter-spacing: 0.02em;
+        color: #343434;
+        @media screen and (max-width : $screen-xsm+px) {
+            font-size: 10px;
+        } 
+    }
+    &__button{
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+        padding: 14px 25px;
+        background: #fff;
+        font-family: 'Roboto Condensed';
+        font-weight: 700;
+        @media screen and (max-width : $screen-xsm+px) {
+            display: none;
+        } 
+    }
+    &__image{
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @media screen and (max-width : $screen-xsm+px) {
+            width: 50%;
+            margin-left: 50%;
+            img{
+                object-position: 100%;
+ 
+            }
+        }   
+    }
+
+    // .slick-arrow.slick-prev, .slick-arrow.slick-next{
+    .slick-arrow{
+        inset: unset;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background: #fff;
+        z-index: 5;
+        &::before{
+            width: 30px;
+            border-radius: 0;
+            color: #000;
+            display: block;
+        }
+        @media screen and (max-width : $screen-md+px) {
+            top: unset;
+            transform: translateY(0);
+            bottom: 24px;
+        }
+        @media screen and (max-width : $screen-xsm+px) {
+            display: none !important;
+        }  
+    }
+    .slick-arrow.slick-prev{
+        left: 25px;
+        &:before{
+            content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6 2L2 6L6 10' stroke='black' stroke-width='2' stroke-linecap='square'/%3e%3c/svg%3e ");
+            height: 25px;
+        }
+        @media screen and (max-width : $screen-md+px) {
+            left: unset;
+            right: 54px;
+        }
+
+    }
+    .slick-arrow.slick-next{
+        right: 25px;
+        &:before{
+            content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6 2L2 6L6 10' stroke='black' stroke-width='2' stroke-linecap='square'/%3e%3c/svg%3e ");
+            transform: rotate(180deg);
+            height: 27px;
+
+        }
+        @media screen and (max-width : $screen-md+px) {
+            right: 24px;
+        }
+    }
+}
