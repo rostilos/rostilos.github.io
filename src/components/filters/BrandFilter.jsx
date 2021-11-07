@@ -5,7 +5,7 @@ function BrandFilter() {
 
     return ( 
         <div  className='brand-filter filter'>
-            1
+            
         </div>
     )
 }
