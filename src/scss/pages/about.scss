@@ -61,7 +61,7 @@
         flex-direction: column;
         height: 100%;
         padding: 10px 0;
-        @include adaptive-value('padding-left',228, 50, 1024);
+        @include adaptive-value('padding-left',228, -30, 1);
         margin-right: 48px;
         p {
             color : $primary-text-color;
