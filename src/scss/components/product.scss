@@ -26,7 +26,7 @@
         max-height: 150px;
         padding: 0 10px;
         margin: 0 auto;
-        @include adaptive-value('margin-top',38,13,320);
+        @include adaptive-value('margin-top', 38, 13, 320);
         img{
             object-fit: contain;
             height: 100%;
