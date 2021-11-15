@@ -3,7 +3,7 @@ import HeaderCategories from "./HeaderCategories";
 import BurgerMenu from "./BurgerMenu";
 import { Link } from 'react-router-dom';
 import { useSelector , useDispatch } from 'react-redux';
-import { setCategory} from '../../redux/actions/filters';
+import { setCategory} from '../../redux/actions/category';
 
 
 const Header = function ({categories, navItems}) {

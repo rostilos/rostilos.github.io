@@ -1,6 +1,4 @@
 const initialState = {
-    category : null,
-    categoryTitle : 'Выберите категорию ...',
     sortBy : 'popular',
     price : {
         from : false,

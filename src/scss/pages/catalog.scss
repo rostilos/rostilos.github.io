@@ -3,6 +3,9 @@
         display: grid;
         grid-template-columns: 263px 1fr;
         grid-template-areas: "sidebar products";
+        @media screen and (max-width : $screen-md+px){
+            display: block;
+        }
     }
     &__products{
         grid-area: products;
