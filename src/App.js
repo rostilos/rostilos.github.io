@@ -5,6 +5,8 @@ import { Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Catalog from './pages/Catalog';
 import About from './pages/About';
+import ProductView from './pages/ProductView';
+
 import  { connect } from 'react-redux';
 import { useDispatch} from 'react-redux';
 import { setProducts } from './redux/actions/products';
@@ -89,6 +91,7 @@ function App(props) {
                 <Route exact component={Home} path="/"/>
                 <Route render={ (routeProps)=> <Catalog categories={categories} {...routeProps}/>} path="/catalog/"/>
                 <Route component={About} path="/about/"/>
+                <Route component={ProductView} path="/product/:id"/>
             </main>
             <Footer categories={categories}/>
         </div>

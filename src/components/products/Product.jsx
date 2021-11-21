@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import {Link} from 'react-router-dom';
 const Product = function (props) {
 
     return (
@@ -13,7 +13,13 @@ const Product = function (props) {
             </div>
 
             <div className="product__body">
-                <h3 className="product__title">{props.title}</h3>
+                <Link 
+                    to={`/product/${props.id}`}
+                    className="burger-menu__link"
+                    
+                >
+                    <h3 className="product__title" >{props.title}</h3>
+                </Link>
                 <div className="product__category">{props.categoryTitle}</div>
                 <div className="product__price">{`${props.price}P`}</div>
                 <div className="product--hovered">
